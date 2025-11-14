@@ -88,7 +88,7 @@ const Footer = () => {
               Reach Us Out
             </h4>
             <ul className="mt-4 space-y-3 text-xs text-gray-700">
-              <li className="flex items-start gap-3 group">
+              <li className="flex items-start gap-3 group ">
                 <span className="mt-[2px] text-sm">
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-sky-50 text-sky-500 shadow-sm transition-all duration-300 group-hover:bg-sky-100 group-hover:shadow-md group-hover:-translate-y-[2px]">
                     <FaLocationDot />
@@ -104,13 +104,13 @@ const Footer = () => {
                 </span>
               </li>
 
-              <li className="flex items-start gap-3 group">
+              <li className="flex items-center  gap-3 group">
                 <span className="text-sm">
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-sky-50 text-sky-500 shadow-sm transition-all duration-300 group-hover:bg-sky-100 group-hover:shadow-md group-hover:-translate-y-[2px]">
                     <MdEmail />
                   </span>
                 </span>
-                <span className="pb-5 text-start font-outfit text-[18px]">
+                <span className=" text-start font-outfit text-[18px]">
                   <a
                     href="mailto:info@lwbl.org"
                     className="transition-colors duration-300 group-hover:text-gray-900"
@@ -120,16 +120,16 @@ const Footer = () => {
                 </span>
               </li>
 
-              <li className="flex items-start gap-3 group">
+              <li className="flex mt-5 items-center  gap-3 group">
                 <span className="text-sm">
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-sky-50 text-sky-500 shadow-sm transition-all duration-300 group-hover:bg-sky-100 group-hover:shadow-md group-hover:-translate-y-[2px]">
                     <FaPhoneAlt />
                   </span>
                 </span>
-                <span className="pb-5 text-start font-outfit text-[18px]">
+                <span className=" text-start font-outfit text-[18px]">
                   <a
                     href="tel:11234567890"
-                    className="transition-colors duration-300 group-hover:text-gray-900"
+                    className="transition-colors duration-300 group-hover:text-gray-900 "
                   >
                     (1) 123-456-7890
                   </a>

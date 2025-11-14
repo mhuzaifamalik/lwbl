@@ -32,11 +32,11 @@ const Hero = () => {
       // Fade & slide in nav links one after another
       if (navRef.current) {
         const links = navRef.current.querySelectorAll("a");
-        tl.from(links, { y: 20, opacity: 0, stagger: 0.08, duration: 0.5 }, "-=0.7");
+        tl.from(links, { y: 0, opacity: 0, stagger: 0.08, duration: 0.5 }, "-=0.7");
       }
       // Fade & slide in the button
       if (buttonRef.current) {
-        tl.from(buttonRef.current, { y: 20, opacity: 0, duration: 0.5 }, "-=0.4");
+        tl.from(buttonRef.current, { y: 0 , opacity: 0, duration: 0.5 }, "-=0.4");
       }
     }, headerRef);
 
@@ -59,15 +59,15 @@ const Hero = () => {
   }, [isOpen]);
 
   return (
-    <header ref={headerRef} className="absolute top-0 left-0 w-full z-20">
+    <header ref={headerRef} className="flex items-center gap-[25px] absolute top-0 left-0 w-full z-20 p-5 sticky bg-[#000]" >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
-          <img src={Logo} alt="Company Logo" className="w-50 h-25 object-contain" />
+        <div className="flex items-center space-x-2 scale-25">
+          <img src={Logo} alt="Company Logo" className="w-60 h-25 object-contain" />
         </div>
 
         {/* Desktop Nav */}
-        <nav ref={navRef} className="hidden md:flex space-x-8 pt-5">
+        <nav ref={navRef} className="hidden md:flex space-x-8 ">
           {menuItems.map((item) => (
             <a
               key={item.label}

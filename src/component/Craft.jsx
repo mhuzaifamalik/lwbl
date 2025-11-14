@@ -33,7 +33,8 @@ const Craft = () => {
             {crafts.map((item, index) => (
               <Col key={index} xs={24} sm={24} md={8}>
                 <div
-                  className="relative flex flex-col justify-center items-center rounded-xl overflow-hidden"
+                  className="relative group flex flex-col justify-center items-center rounded-xl overflow-hidden 
+               transition-all duration-500 ease-out cursor-pointer"
                   style={{
                     backgroundImage: `url(${item.img})`,
                     backgroundSize: "cover",
@@ -41,10 +42,20 @@ const Craft = () => {
                     minHeight: "35vh",
                   }}
                 >
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-black/40"></div>
+                  {/* Dark overlay */}
+                  <div className="absolute inset-0 bg-black/40 transition-all duration-500 group-hover:bg-black/60"></div>
 
-                  <div className="relative z-10 text-center px-4 py-8">
+                  {/* Image Zoom (pseudo using scale on container) */}
+                  <div className="absolute inset-0 transition-all duration-700 group-hover:scale-110"
+                    style={{
+                      backgroundImage: `url(${item.img})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }}
+                  />
+
+                  {/* Content */}
+                  <div className="relative z-10 text-center px-4 py-8 transition-all duration-500 group-hover:-translate-y-2">
                     <FaLock className="text-white block m-auto text-[20px] mb-3" />
                     <p className="text-white font-outfit text-sm md:text-base">
                       This is just a preview. Become a member to explore full
@@ -52,15 +63,32 @@ const Craft = () => {
                     </p>
                   </div>
                 </div>
-                <h2 className="text-black font-cinzel text-[22px] md:text-[25px] mt-5">
+
+                {/* Title */}
+                <h2 className="text-black font-cinzel text-[22px] md:text-[25px] mt-5 text-center">
                   {item.title}
                 </h2>
               </Col>
             ))}
           </Row>
-            <button className=" mt-[45px] text-black font-outfit font-semibold px-6 py-3 rounded-full shadow-md hover:opacity-90 transition duration-300" style={{
-                    background: "linear-gradient(29deg, rgba(0, 240, 251, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(0, 240, 251, 1) 100%)",
-                }}>Unlock Resources \ Become a Member</button>
+       <button
+  className="mt-[45px] text-black font-outfit font-semibold px-6 py-3 rounded-full 
+             shadow-md transition-all duration-500 hover:-translate-y-1 
+             hover:shadow-lg hover:text-black"
+  style={{
+    background: "linear-gradient(29deg, rgba(0,240,251,1) 0%, rgba(255,255,255,1) 50%, rgba(0,240,251,1) 100%)",
+    backgroundSize: "200% 200%",
+    transition: "all 0.6s ease",
+  }}
+  onMouseEnter={(e) => {
+    e.target.style.backgroundPosition = "right center";
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.backgroundPosition = "left center";
+  }}
+>
+  Unlock Resources \ Become a Member
+</button>
         </div>
       </div>
     </section>

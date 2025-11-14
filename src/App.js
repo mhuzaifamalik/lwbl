@@ -10,6 +10,7 @@ import Challenges from './component/Challenges';
 import Growth from './component/Growth'
 import Community from './component/Community';
 import Spotlight from './component/Spotlight';
+import Motion from './component/Growth'
 import Footer from './component/Footer';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       <Growth />
       <Community />
       <Spotlight />
+      {/* <Motion /> */}
       <Footer />
     </div>
   );

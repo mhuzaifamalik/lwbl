@@ -102,9 +102,18 @@ function Ourmission() {
                                 </li>
                             </ul>
                             <button
-                                className="flex  text-black font-outfit font-semibold px-6 py-3 rounded-full shadow-md hover:opacity-90 transition duration-300 "
+                                className="flex text-black font-outfit font-semibold px-6 py-3 rounded-full shadow-md 
+             hover:opacity-90 transition-all duration-500"
                                 style={{
-                                    background: "linear-gradient(29deg, rgba(0, 240, 251, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(0, 240, 251, 1) 100%)",
+                                    background: "linear-gradient(29deg, rgba(0,240,251,1) 0%, rgba(255,255,255,1) 50%, rgba(0,240,251,1) 100%)",
+                                    backgroundSize: "200% 200%",
+                                    backgroundPosition: "0% 50%",
+                                }}
+                                onMouseEnter={(e) => {
+                                    e.target.style.backgroundPosition = "100% 50%";
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.target.style.backgroundPosition = "0% 50%";
                                 }}
                             >
                                 Learn More About Our Story
