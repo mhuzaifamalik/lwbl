@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './component/header';
+import Banner from './component/Banner';
+import Misson from './component/Ourmission';
+import Core from './component/Corepillars';
+import Gallery from './component/Gallery';
+import Cricle from './component/Circle';
+import Craft from './component/Craft';
+import Challenges from './component/Challenges';
+import Growth from './component/Growth'
+import Community from './component/Community';
+import Spotlight from './component/Spotlight';
+import Footer from './component/Footer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Banner />
+      <Misson />
+      <Core />
+      <Gallery />
+      <Craft />
+      <Cricle />
+      <Challenges />
+      <Growth />
+      <Community />
+      <Spotlight />
+      <Footer />
     </div>
   );
 }
