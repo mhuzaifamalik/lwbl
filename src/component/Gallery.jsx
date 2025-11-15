@@ -166,9 +166,26 @@ function Gallery() {
                         </a>
                     </Col>
                 </Row>
-                <button className=" mt-[45px] text-black font-outfit font-semibold px-6 py-3 rounded-full shadow-md hover:opacity-90 transition duration-300" style={{
-                    background: "linear-gradient(29deg, rgba(0, 240, 251, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(0, 240, 251, 1) 100%)",
-                }}>See More At Higher Member Tiers</button>
+         <button
+  className="
+    mt-[45px] text-black font-outfit font-semibold px-6 py-3 rounded-full 
+    shadow-md hover:opacity-90 transition duration-300 border
+  "
+  style={{
+    background:
+      "linear-gradient(29deg, rgba(0, 240, 251, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(0, 240, 251, 1) 100%)",
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.background =
+      "url('/your-image.jpg') center/cover no-repeat";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.background =
+      "linear-gradient(29deg, rgba(0, 240, 251, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(0, 240, 251, 1) 100%)";
+  }}
+>
+  See More At Higher Member Tiers
+</button>
             </div>
         </section>
     );

@@ -280,17 +280,14 @@ function Growth() {
           variants={tabContainerVariants}
           whileHover="hover"
         >
-          <div className="inline-flex rounded-full border-2 border-[#E4E4E4] bg-white/80 backdrop-blur-sm p-1 gap-1">
+          <div className="inline-flex rounded-full border-2 border-[#E4E4E4] bg-white/80 p-1 gap-1">
             {TABS.map((tab) => (
               <motion.button
                 key={tab.id}
                 type="button"
                 onClick={() => setActiveTab(tab.id)}
                 className={`px-8 py-3 rounded-full text-sm font-outfit font-semibold transition-all duration-300 relative overflow-hidden ${
-                  activeTab === tab.id
-                    ? "text-white shadow-2xl"
-                    : "text-[#111] hover:text-[#00F0FB]"
-                }`}
+                  activeTab === tab.id}`}
                 variants={tabVariants}
                 whileHover="hover"
                 whileTap="tap"

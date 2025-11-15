@@ -206,12 +206,12 @@ function Community() {
 
           <motion.button
             type="button"
-            className="inline-flex w-max items-center rounded-full border border-neutral-900 px-6 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.25em] text-neutral-900 relative overflow-hidden"
+            className="inline-flex w-max  mx-auto justify-center items-center rounded-full border border-neutral-900 px-6 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.25em] text-neutral-900 relative overflow-hidden"
             variants={buttonVariants}
             whileHover="hover"
             whileTap="tap"
           >
-            <span className="relative z-10">Follow Us On X</span>
+            <span className="relative z-10 ">Follow Us On X</span>
             
             {/* Button hover background */}
             <motion.div 

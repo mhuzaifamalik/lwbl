@@ -59,7 +59,7 @@ const Hero = () => {
   }, [isOpen]);
 
   return (
-    <header ref={headerRef} className="flex items-center gap-[25px] absolute top-0 left-0 w-full z-20 p-5 sticky bg-[#000]" >
+    <header ref={headerRef} className="flex items-center gap-[25px] absolute top-0 left-0 w-full z-20 p-5" >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2 scale-25">

@@ -145,7 +145,7 @@ const Footer = () => {
           <p>
             Powered By{" "}
             <span className="font-medium font-outfit text-[18px] bg-gradient-to-r from-sky-500 via-cyan-500 to-sky-500 bg-clip-text text-transparent transition-all duration-500 hover:brightness-110 hover:drop-shadow">
-              Design Verse Studios
+             <a href="http://designversestudios.com/" target="_blank">Design Verse Studios</a>
             </span>
           </p>
         </div>
